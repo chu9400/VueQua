@@ -1,4 +1,6 @@
-# vuedongsan2
+# VueQua 만들기
+
+## 무엇부터 시작해야하나.
 
 ## Project setup
 ```
