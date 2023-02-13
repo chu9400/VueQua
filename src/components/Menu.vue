@@ -1,33 +1,97 @@
 <template>
   <div class="menu">
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">About</a>
-  </div>
 
+    <div class="category-01 row">
+      <p class="col"><a href="#">신상품</a></p>
+      <p class="col"><a href="#">생물</a></p>
+      <p class="col"><a href="#">세계담수어</a></p>
+      <p class="col"><a href="#">여과기/여과재</a></p>
+      <p class="col"><a href="#">바닥재</a></p>
+      <p class="col"><a href="#">사료</a></p>
+      <p class="col"><a href="#">히터/냉각</a></p>
+      <p class="col"><a href="#">조명</a></p>
+      <p class="col"><a href="#">약품</a></p>
+      <p class="col"><a href="#">번식/뜰채/청소</a></p>
+      <p class="col"><a href="#">수조</a></p>
+      <p class="col"><a href="#">배송/포장</a></p>
+      <p class="col"><a href="#">뷰쿠아브리딩</a></p>
+    </div>
+
+    <div class="category-02 row">
+
+      <ul class="col">
+        <li>신상품</li>
+        <li>용품</li>
+        <li>생물</li>
+      </ul>
+      <ul class="col">
+        <li>생물</li>
+        <li>대형어/고대어</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+        <li>가아피쉬</li>
+      </ul>
+      <ul class="col">
+        <li>세계담수어</li>
+        <li>아프리카</li>
+        <li>남미</li>
+        <li>아시아</li>
+        <li>아메리카</li>
+        <li>호주</li>
+      </ul>
+      <ul class="col">
+        <li>세계담수어</li>
+        <li>아프리카</li>
+        <li>남미</li>
+        <li>아시아</li>
+        <li>아메리카</li>
+        <li>호주</li>
+      </ul>
+      <ul class="col">
+        <li>세계담수어</li>
+        <li>아프리카</li>
+        <li>남미</li>
+        <li>아시아</li>
+        <li>아메리카</li>
+        <li>호주</li>
+      </ul>
+      <ul class="col">
+        <li>세계담수어</li>
+        <li>아프리카</li>
+        <li>남미</li>
+        <li>아시아</li>
+        <li>아메리카</li>
+        <li>호주</li>
+      </ul>
+      <ul class="col">
+        <li>세계담수어</li>
+        <li>아프리카</li>
+        <li>남미</li>
+        <li>아시아</li>
+        <li>아메리카</li>
+        <li>호주</li>
+      </ul>
+
+    </div>
+    
+    
+  </div>
 </template>
 
 
 
 <script>
 export default {
-/*     신상품
-생물
-세계담수어
-수조크기별
-학술적분류
-사료
-여과기/여과재
-바닥재
-히터/냉각
-조명
-약품/테스터
-에어펌프/용품
-번식/뜰채/청소
-서적/기타
-배송/포장
-힐링브리딩
-물고기 선주문  */
+
 };
 </script>
 
