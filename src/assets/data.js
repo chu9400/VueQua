@@ -1,0 +1,38 @@
+export default [
+    {
+    id : 0,
+    title: "Sinrim station 30 meters away",
+    image: "https://github.com/chu9400/VueQua/blob/master/public/image/testImage.png?raw=true",
+    content: "18년 신축공사한 남향 원룸 ☀️, 공기청정기 제공",
+    price: 340000,
+    신고수 : 0,
+    신고상태 : false,
+    },
+    {
+    id : 1,
+    title: "Changdong Aurora Bedroom(Queen-size)",
+    image: "https://github.com/chu9400/VueQua/blob/master/public/image/logo.jpg?raw=true",
+    content: "침실만 따로 있는 공용 셰어하우스입니다. 최대 2인 가능",
+    price: 450000,
+    신고수 : 0,
+    신고상태 : false,
+    },
+    {
+    id : 1,
+    title: "Changdong Aurora Bedroom(Queen-size)",
+    image: "https://github.com/chu9400/VueQua/blob/master/public/image/logo.jpg?raw=true",
+    content: "침실만 따로 있는 공용 셰어하우스입니다. 최대 2인 가능",
+    price: 450000,
+    신고수 : 0,
+    신고상태 : false,
+    },
+    {
+    id : 1,
+    title: "Changdong Aurora Bedroom(Queen-size)",
+    image: "https://github.com/chu9400/VueQua/blob/master/public/image/logo.jpg?raw=true",
+    content: "침실만 따로 있는 공용 셰어하우스입니다. 최대 2인 가능",
+    price: 450000,
+    신고수 : 0,
+    신고상태 : false,
+    },
+];

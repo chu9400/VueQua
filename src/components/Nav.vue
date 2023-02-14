@@ -1,11 +1,11 @@
 <template>
-  <nav class="nav">
+  <nav class="nav container">
 
     <div class="row nav-Wrap">
       <div class="row icon col-4">
-        <p class="col-3">아이콘1</p>
-        <p class="col-3">아이콘2</p>
-        <p class="col-3">아이콘3</p>  
+        <p class="col-md-3">아이콘1</p>
+        <p class="col-md-3">아이콘2</p>
+        <p class="col-md-3">아이콘3</p>  
       </div>
 
       <div class="logo col-4">

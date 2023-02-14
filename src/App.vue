@@ -2,6 +2,7 @@
   <Nav />
   <Menu />
   <Modal />
+  <Recommend />
   <Contents />
 </template>
 
@@ -9,16 +10,18 @@
 
 import Nav from "./components/Nav.vue";
 import Modal from "./components/Modal.vue";
+import Menu from "./components/Menu.vue";
+import Recommend from "./components/Recommend.vue";
 import Contents from "./components/Contents.vue";
-import Menu from './components/Menu.vue';
 
 export default {
   name: "App",
   components: {
     Nav,
-    Modal,
-    Contents,
     Menu,
+    Modal,
+    Recommend,
+    Contents,
   },
 
 };
