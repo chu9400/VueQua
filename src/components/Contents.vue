@@ -1,40 +1,68 @@
 <template>
-<div class="container">
+  <div class="container">
+    <div class="newContentText">
+      신상품
+    </div>
 
-  <div class="newContentText">
-    신상품
+    <div class="contents" v-for="(a,i) in sliceData" :key="i">
+      <img :src="a.image" alt="">
+      <p class="etc-text mt-2">{{a.etc}}</p>
+      <p class="title-text mt-2">{{a.title}}</p>
+      <p class="price-text mt-2">{{a.price.toLocaleString()}}</p>
+      <p class="quantity-text">재고 수량 - {{a.quantity}}</p>
+    </div>
+
+    <div class="more" v-if="moreBtnState == true">
+      <button type="button" class="more-btn" @click="showMore(), moreBtnStateFalse()"> 더보기 </button>
+    </div>
+
   </div>
-
-  <div class="contents" v-for="(a,i) in getData " :key="i">
-    <img :src="getData[i].image" alt="">
-    <p class="etc-text">기니야생</p>
-    <p class="title-text">볼비티스 Wild [1뿌리]</p>
-    <p class="price-text">4,000원</p>
-    <p class="quantity-text">재고수량 - 1904개</p>
-    
-
-  </div>
-  
-</div>
 </template>
 
 <script>
-import {mapMutations, mapState} from 'vuex'
+  import { mapMutations, mapState } from 'vuex'
 
-export default {
-  name: 'Contents',
-  computed : {
-    ...mapState(['getData']),
-  },
+  export default {
+    name: 'Contents',
 
-  methods : {
-    ...mapMutations(['모달창상태변경', '신고하기']),
-  }, 
+    data() {
+      return {
+        moreBtnState : true
+      }
+    },
 
-}
+    computed: {
+      ...mapState(['getData', 'displayCount', 'increaseAmount',]),
+
+
+    // 상품 갯수 몇 개를 출력할지 정하는 함수
+      sliceData() {
+        return this.getData.slice(0, this.displayCount);
+      },
+
+
+    },
+
+    methods: {
+      ...mapMutations(['모달창상태변경', '신고하기', 'showMore',]),
+
+      // 더보기 버튼 함수
+      moreBtnStateFalse() {
+        if(this.displayCount >= this.getData.length ) {
+          this.moreBtnState = false;
+        } 
+        
+      },
+
+    },
+  
+  };
 </script>
 
 <style>
+body p {
+  margin-bottom : 0;
+}
 
  .newContentText{
   font-family: 'SUIT';
@@ -92,4 +120,32 @@ export default {
   color: #0047FF;
 }
 
+
+.more {
+
+}
+
+.more .more-btn{
+
+font-family: 'SUIT';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+color: #767676;
+
+box-sizing: border-box;
+width: 150px;
+height: 50px;
+left: 885px;
+top: 2860px;
+background: #FFFFFF;
+border: 1px solid #767676;
+border-radius: 30px;
+}
+
+.more .more-btn:hover{
+    background:#767676;
+    color: #FFFFFF;
+}
 </style>

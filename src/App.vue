@@ -28,5 +28,12 @@ export default {
 </script>
 
 <style>
-
+#app {
+    font-family: Arial, sans-serif, 'SUIT';
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    height: 5000px;
+  }
 </style>
