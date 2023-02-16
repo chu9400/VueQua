@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 import axios from 'axios'
 
 import data from './assets/data.js';
+import data2 from './assets/data2.js';
 
 const store = createStore({
   state(){
@@ -9,10 +10,13 @@ const store = createStore({
       more : {},
       모달창상태 : false,
       getData : data,
+      getData2 : data2,
       누른거 : 0,
       category02_State : false,
       displayCount: 8, // 처음에는 8개만 렌더링합니다.
       increaseAmount: 4, // 버튼 클릭 시 렌더링할 데이터의 수를 증가시킵니다.
+      displayCount2: 8,
+      increaseAmount2: 4, 
   
     }
   },
@@ -45,11 +49,18 @@ const store = createStore({
     
     // ------ end 카테고리 상태 변경하는 함수 ------- 
 
+
+    
     // ------ 더보기 버튼 함수 ------- 
+    // Contents.vue에 추가 함수 있음.
 
     showMore(state) {
       // displayCount 값을 increaseAmount 만큼 증가시킵니다.
       state.displayCount += state.increaseAmount;
+    },
+    
+    showMore2(state) {
+      state.displayCount2 += state.increaseAmount2;
     },
 
 

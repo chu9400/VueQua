@@ -4,7 +4,7 @@
       신상품
     </div>
 
-    <div class="contents" v-for="(a,i) in sliceData" :key="i">
+    <div class="contents" v-for="(a,i) in sliceDataNew" :key="i">
       <img :src="a.image" alt="">
       <p class="etc-text mt-2">{{a.etc}}</p>
       <p class="title-text mt-2">{{a.title}}</p>
@@ -15,6 +15,23 @@
     <div class="more" v-if="moreBtnState == true">
       <button type="button" class="more-btn" @click="showMore(), moreBtnStateFalse()"> 더보기 </button>
     </div>
+
+    <div class="newContentText">
+      뷰쿠아 용품
+    </div>
+
+    <div class="contents" v-for="(a,i) in sliceDataProduct" :key="i">
+      <img :src="a.image" alt="">
+      <p class="etc-text mt-2">{{a.etc}}</p>
+      <p class="title-text mt-2">{{a.title}}</p>
+      <p class="price-text mt-2">{{a.price.toLocaleString()}}</p>
+      <p class="quantity-text">재고 수량 - {{a.quantity}}</p>
+    </div>
+
+    <div class="more" v-if="moreBtnState2 == true">
+      <button type="button" class="more-btn" @click="showMore2(), moreBtnStateFalse2()"> 더보기 </button>
+    </div>
+
 
   </div>
 </template>
@@ -27,31 +44,41 @@
 
     data() {
       return {
-        moreBtnState : true
+        moreBtnState : true,
+        moreBtnState2 : true,
       }
     },
 
     computed: {
-      ...mapState(['getData', 'displayCount', 'increaseAmount',]),
+      ...mapState(['getData', 'displayCount', 'increaseAmount','getData2', 'displayCount2', 'increaseAmount2',]),
 
 
     // 상품 갯수 몇 개를 출력할지 정하는 함수
-      sliceData() {
+      sliceDataNew() {
         return this.getData.slice(0, this.displayCount);
+      },
+
+      sliceDataProduct() {
+        return this.getData2.slice(0, this.displayCount2);
       },
 
 
     },
 
     methods: {
-      ...mapMutations(['모달창상태변경', '신고하기', 'showMore',]),
+      ...mapMutations(['모달창상태변경', '신고하기', 'showMore', 'showMore2',]),
 
       // 더보기 버튼 함수
       moreBtnStateFalse() {
         if(this.displayCount >= this.getData.length ) {
           this.moreBtnState = false;
         } 
-        
+      },
+
+      moreBtnStateFalse2() {
+        if(this.displayCount2 >= this.getData2.length ) {
+          this.moreBtnState2 = false;
+        } 
       },
 
     },

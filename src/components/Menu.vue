@@ -1,6 +1,6 @@
 <template>
   <div class="menu container">
-    <div class="category-01 row container">
+    <div class="category-01 row ">
       <ul class="col-md-1 row">
         <li class="col-md-12">
           <svg
@@ -18,7 +18,6 @@
       <ul
         class="col-md-11 d-flex justify-content-around"
         @mouseover="category02_StateTrue()"
-        @mouseleave="category02_StateFalse()"
       >
         <li class="col-md-1"><a href="#">신상품</a></li>
         <li class="col-md-1"><a href="#">생물</a></li>
@@ -34,7 +33,9 @@
       </ul>
     </div>
 
-    <div class="category-02 row container" v-if="category02_State == true">
+    <div class="category-02" v-if="category02_State == true" @mouseleave="category02_StateFalse()">
+      <div class="container row">
+
       <ul class="col">
         <li>신상품</li>
         <li>용품</li>
@@ -96,6 +97,7 @@
         <li>아메리카</li>
         <li>호주</li>
       </ul>
+      </div>
     </div>
   </div>
 
@@ -175,6 +177,10 @@ export default {
 </script>
 
 <style>
+.menu {
+  width: 1180px;
+  margin: 0 auto;
+}
 .menu a {
   color: black;
   text-decoration: none;
@@ -182,7 +188,7 @@ export default {
 }
 
 .category-01 {
-  width: 1180px;
+  width: 1180px !important;
   margin: 0 auto;
 }
 
@@ -209,6 +215,10 @@ export default {
   background-color: black;
   opacity: 0.5;
   color: white;
+}
+
+.category-02 ul {
+  width: 115px;
 }
 
 .banner {

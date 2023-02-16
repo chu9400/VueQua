@@ -1,10 +1,13 @@
 <template>
   <nav class="nav container">
     <div class="row nav-Wrap">
+
+     
+      
       <div class="row icon col-4">
-        <p class="col-md-3">아이콘1</p>
-        <p class="col-md-3">아이콘2</p>
-        <p class="col-md-3">아이콘3</p>
+        <p class="col-md-3"><img src="../../public/image/user.png" alt="user"></p>
+        <p class="col-md-3"><img src="../../public/image/heart.png" alt="heart"></p>
+        <p class="col-md-3"><img src="../../public/image/cart.png" alt="cart"></p>
       </div>
 
       <div class="logo col-4">
@@ -16,6 +19,8 @@
           <input type="text" />
         </form>
       </div>
+    
+
     </div>
   </nav>
 </template>
@@ -27,20 +32,30 @@ export default {};
 </script>
 
 <style>
+
+.container{
+  width: 1180px;
+}
+
 .nav {
   width: 1920px;
   line-height: 80px;
+  
 }
 
 .nav-Wrap {
   width: 1180px;
   height: 80px;
-  left: calc(50% - 1180px / 2);
+  
   background: #ffffff;
   margin: 0 auto;
 }
 
-.icon {
+.icon p{
+  width: 20px;
+  height: 18px;
+  margin-right: 30px;
+
 }
 
 .log p {
