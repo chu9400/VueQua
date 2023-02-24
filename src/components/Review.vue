@@ -1,23 +1,34 @@
 <template>
   <div class="container">
     <div class="newContentText">
-      신상품
+      구매후기
     </div>
   </div>
 
 
-    <div class="container">
-    <div class="image-list">
-      <img src='../../public/image/goods/img_0001.png' alt="image1" />
-      <img src="image2.jpg" alt="image2" />
-      <img src="image3.jpg" alt="image3" />
-      <img src="image4.jpg" alt="image4" />
-      <img src="image5.jpg" alt="image5" />
-      <img src="image6.jpg" alt="image6" />
-      <img src="image7.jpg" alt="image7" />
-      <img src="image8.jpg" alt="image8" />
+  <div class="view-Area container">
+    <div class="view-Wrap">
+      <ul class="d-flex">
+        <li v-for="(a,i) in 10" :key="i">
+          <img src="../../public/image/goods/img_0001.png" alt="">
+          <p class="r-text-01">파르불루스 잘 받았습니다</p>
+          <p class="r-text-02">전화로 15마리 예약하여 화요일날 받았는..</p>
+          <ul class="d-flex r-text-03">
+            <li class="">백민기</li>
+            <li class="">2023-02-09</li>
+          </ul>
+          <ul class="d-flex r-text-04">
+            <li>이미지</li>
+            <li>파르불루스 리코리스 구라미 Wild</li>
+          </ul>
+        </li>
+      </ul>
     </div>
+
   </div>
+
+
+  
 </template>
 
 <script>
@@ -47,39 +58,69 @@
 </script>
 
 <style>
-body p {
-  margin-bottom : 0;
-}
 
- .newContentText{
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 45px;
-  letter-spacing: -1px;
-  color: #171717;
-  margin: 100px 0px;
+.view-Area {
+  max-width: 1980px;
+  margin-bottom: 150px;
 }
-
-.container {
-  max-width: 1920px;
+.view-Wrap {
+  width: 1180px;
   margin: 0 auto;
-  overflow-x: auto;
+  overflow-x: auto; /* 가로 스크롤을 허용합니다 */
+  white-space: nowrap; /* 가로 스크롤을 위해 내용들을 가로 한 줄에 나열합니다 */
+  text-align: left;
 }
 
-.image-list {
-  display: flex;
-  justify-content: center;
-  width: 1180px; /* 추가된 코드 */
+.view-Wrap ul{
+  
 }
 
-.image-list img {
-  width: 250px;
-  height: 250px;
-  margin: 0 20px;
-  opacity: 0.5;
+.view-Wrap>ul>li{
+  margin-right: 15px;
 }
 
-.image-list img:hover {
-  opacity: 1;
+.view-Wrap img{
+  width: 280px;
+  height: 312px;
+}
+
+.scrollable-content {
+  display: inline-block; /* 내용물들이 세로로 쌓이지 않도록 inline-block으로 설정합니다 */
+}
+
+.r-text-01{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: #111111;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.r-text-02{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #111111;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.r-text-03{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #666666;
+  
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.r-text-04{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 </style>
